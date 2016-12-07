@@ -1,0 +1,147 @@
+<html>
+    <head>  
+        <meta charset="utf-8">
+        <title> 地产详情</title>
+        <style>
+        body{
+            /*width: 100%;*/
+            height: 100%;
+            background-image:url(Image/xt.jpg);
+            /*图片重复*/
+            /*repeat重复*/
+            background-repeat: no-repeat;
+            /*设置图片的大小 宽高100% 100%*/
+            background-size:100% 100%;
+        }
+        ul{
+            /*list-style-type
+            列表前边属性的类型*/
+            /*disc实心圆  none没有样式 circle空心圆
+            square实心方块*/
+            /*list-style-type:disc;*/
+            list-style-type: none;
+            }
+            li{
+                /*设置外边距*/
+                margin-bottom: 30px;
+                animation-name:donghua;
+
+            /*动画时间*/
+            animation-duration: 2s;
+             /*设置动画的填充位置*/
+             /*设置动画的起始位置是设置的起始位置
+               而不是原来图片的位置
+                 告诉图片起始点 动画结束就停在设置结束的位置*/
+            animation-fill-mode: both;
+
+            }
+            a{
+                color:white;
+                background-color:black;
+        /*设置透明度 opacity*/
+                opacity: 0.75;
+       /*设置外边距 padding*/
+       padding-top:10px;
+       /*padding-right:30px;*/
+       padding-bottom:10px;
+       padding-left:15px;
+    /*设置圆角*/
+       border-top-right-radius: 10px;
+       border-bottom-right-radius: 10px;
+     /*添加小图片*/
+       background-image: url(Image/right-arrow.png);
+     /*repeat重复*/
+       background-repeat: no-repeat;
+     /*修改背景图位置*/
+     /*设置位置在中间 在整个块元素中的93%的位置*/
+       background-position:93% center;
+       /*修改背景图大小*/
+       background-size: 8px 15px;
+       }  
+
+/*添加平移动画*/
+             @keyframes donghua{
+        /*transform矩阵*/
+        /*做平移动作  只修改X值*/
+         0%{
+       /*平移:translate*/
+       /*一般传入百分比*/
+       /*0,0是起始位置*/
+       /*-100%是从右到左移动*/
+            transform:translate(-100%,0);
+         }
+        100%{
+            transform:translate(0,0);
+        }  
+     }  
+/*设置延时*/
+     li:nth-of-type(1){
+         /*delay延迟*/
+         animation-delay: 0s;
+     }
+     li:nth-of-type(2){
+         animation-delay: 0.5s;
+     }
+     li:nth-of-type(3){
+         animation-delay: 1s;
+     }
+     li:nth-of-type(4){
+         animation-delay: 1.5s;
+     }
+     li:nth-of-type(5){
+         animation-delay: 2s;
+        
+     }
+     /*利用标签子标签选择器 也可以查找标签中某一个元素*/
+       li:nth-child(1) a{
+         padding-right: 40px;
+
+     }
+       li:nth-child(2) a{
+         padding-right: 55px;
+
+     }
+     li:nth-child(3) a{
+         padding-right: 100px;
+
+     }
+     li:nth-child(4) a{
+         padding-right: 40px;
+
+     }
+     li:nth-child(5) a{
+         padding-right: 70px;
+
+     }
+        </style>
+    </head>
+
+    <body>
+            <!--<ul>无序标签-->
+            <!--<ol>有序标签-->
+        <!--ul是一个无序列表
+            li指的是表中一排内容
+            ul前面没有序号 带的是 .
+            ol前边带有序号
+            -->
+
+        <ul>
+            <li>    
+               <!--a href赋值 #仅仅是为了告诉浏览器这是个链接-->
+               <a href="#"> 楼盘详情</a>
+            </li>
+            <li>
+                <a href="#">全景户型</a>
+            </li>
+            <li>
+                <a href="#">项目图册</a>
+            </li>
+            <li>    
+                <a href="#">预约看房</a>
+            </li>
+            <li>
+                <a href="#">房贷计算器</a>
+            </li>
+        </ul>
+    </body>
+</html>

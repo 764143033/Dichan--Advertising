@@ -1,0 +1,113 @@
+<html>
+    <head>
+      <meta charset="utf-8">
+      <title>地产</title>
+     <style>
+        img{
+        /*如果不设置图片大小 浏览器会默认查找图片自身大小平铺到页面中*/
+        width: 100%;
+        /*以后设置背景图最好设置比例值*/
+        /*一般默认只设置宽度*/
+         display:block;
+        }
+        section{
+            position:relative;
+        }
+        span{
+            /*设置背景色 文字颜色 位置 大小*/
+                /*background-color:black;*/
+        color: red;
+                /*position: absolute;*/
+                /*建议设置两个*/
+                /*top:50px;
+                left:0px;*/
+        /*设置边距*/
+        /*padding内边距*/
+        padding-top: 10px;
+        padding-right: 30px;
+        padding-bottom:10px;
+        padding-left:30px;
+        /*padding：10px 30px 10px 30px*/
+        /*设置*/
+        /*padding:10px 30px 上下 左右
+          10 30 10 上 左右 下
+          类同margin*/
+        /*上右  下右  固定顺序*/
+        border-top-right-radius:13px;
+        border-bottom-right-radius:13px;
+        background-color: #000000;
+        position:absolute;
+        top:50px;
+        left:0px;
+            }
+        
+        body{
+            /*设置目的是消去边距*/
+            /*div默认位置不是原点位置
+               是向右下偏离的一点距离*/
+            margin:0px;
+        }
+
+      </style>
+    </head>
+ <body>
+          <!--section划分区域的
+          指网页中某一个模块
+          使用在列表展示的类型中-->
+          <!--alt作用如果图片没有加载出来就显示文字-->
+      <section>
+         <!--添加超链接-->
+          <!--超链接里面可以添加图片 不仅仅只能是文字-->
+         <!--<a href="www.baidu.com"> <img src="Image/jxj.jpg"alt="这是个图片 "></a>-->
+
+            <a href="dichanxiangqing.html">
+                <!--跳转到第二个页面-->
+                <img src="Image/jxj.jpg"alt="这是个图片 ">      
+                <!--<span>这是一个span</span>-->
+                <!--<span>这是第二个span</span>-->
+                
+                <!--span标签是一个行内（in-line/内联元素）标签 第二个在第一个后面 同一行-->
+                <!--span标签定义的是一个行内，某个模块的区域
+                网页内同一行可以被span标签划分为几个区域
+                span横向排列  
+                div竖向排列
+                span最大特点不会独占一行 一般使用span标签用来标记行内文字使用
+
+                span标签：
+                是内联标签：
+                  类似标签超链接<a> <b> <img>
+                内联标签如果想改变他的显示样式
+                    需要修改他的display标签 、
+                    每一个网页内显示标签都有一个display属性  每一个属性都有自己的默认值
+                  默认属性in-line
+
+                
+                div标签：
+                块元素标签 block level element： 默认属性 block-level
+                例如有：<h1>~<h6> <p> 
+                <ul>无序标签
+                <ol>有序标签
+                -->
+                <!--<div>这是一个div标签</div>-->
+                <!--<div>这是第二个div标签</div>-->
+                <!--默认情况下 行内元素修改都是无效的需要强制转化才能修改-->
+               <span>康桥元西里</span>
+            </a>
+      </section>
+<!--这是第二个区间-->
+      <section>
+           <!--<img src="Image/yxl.jpg"alt="这是第二张图片 ">-->
+           <a href="#"><img src="Image/yxl.jpg"alt="这是第二张图片 ">
+           <span>康桥</span>
+           </a>
+      </section>
+<!--这是第三个区间-->
+      <section>
+          <a href="#">
+           <img src="Image/yd.jpg"alt="这是第三张图片 ">
+           <span>康桥九溪郡</span>
+           </a>
+      </section>
+     
+</body>
+</html>
